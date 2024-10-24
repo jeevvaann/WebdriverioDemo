@@ -1,10 +1,4 @@
-const CountrycodeData = require('../pageobjects/Utils/Countrycode.json');
-const DBUtils = require('../pageobjects/Utils/DBUtils');
 const Page = require('./page');
-const Translator = require('../pageobjects/Utils/Translator');
-
-const getAll = require('./Utils/Dbclass');
-
 class LoginPage extends Page {
   
     
@@ -15,20 +9,23 @@ class LoginPage extends Page {
      
     }
 
+get signin(){
+    return $('//a[contains(text(),"Sign in")]')
+}
+
     get inputUsername() {
-        return $('//input[@name="username"]');
+        return $('//input[@id="email"]');
     }
-    
+
     get inputPassword() {
-        return $('//input[@name="password"]');
+        return $('//input[@id="passwd"]');
     }
 
     get btnSubmit() {
-        return $('button.btn.btn-primary.btn-lg.btn-block');
+        return $('//button[@id="SubmitLogin"]');
     }
 
     async login(username, password) {
-
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();

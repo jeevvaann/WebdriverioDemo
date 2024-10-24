@@ -1,11 +1,12 @@
-Feature: Profile picture Scenarios
+Feature: Login Scenarios
+
   @smoke
-  Scenario: Login to FaZeal application
+  Scenario: Login to application
 
     Given I am on the login page
     When I login with <username> and <password>
-    Then Verify notification button is clickable
-    Then Click on profile Image Button
-    Then Click on Logout Button
 
-  
+Examples:
+      | username              | password | 
+      | jeevvaann@gmail.com   |  December!989 |
+   

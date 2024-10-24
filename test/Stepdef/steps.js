@@ -8,7 +8,7 @@ Given(/^I am on the login page$/, async () => {
     console.log('Application title is : ',browser.getTitle());
 });
 
-When(/^I login with (\w+) and (.+)$/, async(username, password)=>{
+When(/^I login with (.+) and (.+)$/, async(username, password)=>{
     await LoginPage.ClickSignin();
     await LoginPage.login(username,password);
     await LoginPage.screenshot(); 

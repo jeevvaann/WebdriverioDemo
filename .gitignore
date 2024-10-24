@@ -2,3 +2,4 @@ node_modules/
 dist/
 allure-report/
 alure-results/
+driver-logs/

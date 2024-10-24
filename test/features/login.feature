@@ -1,7 +1,7 @@
 Feature: Login Scenarios
 
   @smoke
-  Scenario: Login to application
+  Scenario Outline: Login to application
 
     Given I am on the login page
     When I login with <username> and <password>

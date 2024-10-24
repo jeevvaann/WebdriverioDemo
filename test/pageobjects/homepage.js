@@ -26,17 +26,17 @@ get addkart(){
     }
 
     async addImageproduct() {
-        await this.Imageproduct.waitForClickable({ timeout: 50000 });
+        await this.Imageproduct.waitForClickable({ timeout: 5000 });
         await this.Imageproduct.click();
     }
 
     async changecolour() {
-        await this.AddProdWhite.waitForClickable({ timeout: 50000 });
+        await this.AddProdWhite.waitForClickable({ timeout: 5000 });
         await this.AddProdWhite.click();
     }
 
     async addKart() {
-        await this.addkart.waitForClickable({ timeout: 5000 });
+        await this.addkart.waitForClickable({ timeout: 50000 });
         await this.addkart.click();
     }
 }

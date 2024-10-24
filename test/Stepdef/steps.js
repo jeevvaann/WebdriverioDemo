@@ -20,7 +20,8 @@ Then(/^Enter the product (.+)$/, async(product)=>{
      await homepage.addImageproduct();
 });
 
-Then(/^Select the product and add to kart$/, async()=>{
+Then(/^Select the product and add kart$/, async()=>{
     await homepage.changecolour();
-     await homepage.addKart();
+    await homepage.addKart();
+
 });

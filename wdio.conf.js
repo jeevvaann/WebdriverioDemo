@@ -53,8 +53,9 @@ exports.config = {
 
     
     services: [
-        // 'chromedriver',
-    'selenium-standalone'
+        'chromedriver'
+        // ,
+    // 'selenium-standalone'
     ],
     port: 7777,
     seleniumArgs: {
@@ -184,14 +185,6 @@ exports.config = {
     // Saves a screenshot to a given path if a command fails.
 	screenshotPath: './Screenshot/',
 
-    // Plugins:{'wdio-screenshot':{}},
-    // Framework you want to run your specs with.
-    // The following are supported: Mocha, Jasmine, and Cucumber
-    // see also: https://webdriver.io/docs/frameworks
-    //
-    // Make sure you have the wdio adapter package for the specific framework installed
-    // before running any tests.
-    // framework: 'mocha',
     framework: 'cucumber',
     //
     // The number of times to retry the entire specfile when it fails as a whole
@@ -209,26 +202,11 @@ exports.config = {
     reporters: ['spec',['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
-        // disableWebdriverScreenshotsReporting: false,
 		useCucumberStepReporter:true,
         addConsolrLogs:true
     }]],
 
 
-    
-    //
-    // Options to be passed to Mocha.
-    // See the full list at http://mochajs.org/
-    // =================================================================================================================================== 
-   
-    // mochaOpts: {
-    //     ui: 'bdd',
-    //     timeout: 60000
-    // },
-
-    // ===================================================================================================================================
-
-    //
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
@@ -252,7 +230,7 @@ exports.config = {
     // <boolean> fail if there are any undefined or pending steps
     strict: false,
     // <string> (expression) only execute the features or scenarios with tags matching the expression
-    tagExpression: '@smoke22',
+    tagExpression: '@smoke',
     // <number> timeout for step definitions
     timeout: 600000,
     // <boolean> Enable this config to treat undefined definitions as warnings.
@@ -260,16 +238,7 @@ exports.config = {
   },
 
 
-   // ===================================================================================================================================
-
-    //
-    // =====
-    // Hooks
-    // =====
-    // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
-    // it and to build services around it. You can either apply a single function or an array of
-    // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
-    // resolved to continue.
+   
     /**
      * Gets executed once before all workers get launched.
      * @param {Object} config wdio configuration object
@@ -323,16 +292,7 @@ exports.config = {
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
-    // beforeTest: function () {
-    // // const chai= require('chai')
-    // // const chaiWebdriver = require('chai-webdriverio').default
-    // // chai.use(chaiWebdriver(browser))
-
-    // // global.assert=chai.assert
-    // // global.should=chai.should
-    // // global.expect=chai.expect
-    // global.Langcode='English'
-    // },
+   
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)

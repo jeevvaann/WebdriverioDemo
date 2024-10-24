@@ -5,8 +5,6 @@ const homepage = require('../pageobjects/homepage');
 Given(/^I am on the login page$/, async () => {
     await LoginPage.open();
     await LoginPage.max();
-    browser.pause(3000);
-    console.log('Application title is : ',browser.getTitle());
 });
 
 When(/^I login with (.+) and (.+)$/, async(username, password)=>{

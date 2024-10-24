@@ -17,5 +17,10 @@ When(/^I login with (.+) and (.+)$/, async(username, password)=>{
 
 Then(/^Enter the product (.+)$/, async(product)=>{
     await homepage.Searchin(product);
-     
+     await homepage.addImageproduct();
+});
+
+Then(/^Select the product and add to kart$/, async()=>{
+    await homepage.changecolour();
+     await homepage.addKart();
 });

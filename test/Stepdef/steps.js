@@ -12,8 +12,9 @@ Given(/^I am on the login page$/, async () => {
 When(/^I login with (.+) and (.+)$/, async(username, password)=>{
     await LoginPage.ClickSignin();
     await LoginPage.login(username,password);
-    await LoginPage.screenshot(); 
+    
 });
+
 Then(/^Enter the product (.+)$/, async(product)=>{
     await homepage.Searchin(product);
      

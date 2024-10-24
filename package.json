@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "rimraf allure-results && rimraf allure-report && rimraf test-screenshots && rimraf wdio-logs",
     "report": "allure generate --clean allure-results && allure open allure-report",
     "test": "npx wdio wdio.conf.js"
   },

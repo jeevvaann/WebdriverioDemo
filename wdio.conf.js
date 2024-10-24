@@ -12,50 +12,18 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     maxInstances: 1,
-    //
-    // If you have trouble getting all important capabilities together, check out the
-    // Sauce Labs platform configurator - a great tool to configure your capabilities:
-    // https://saucelabs.com/platform/platform-configurator
-
-    // hostname: Host.hostname,
-    // port:4445,
-    // path:'/wd/hub',
-    // protocol:'http',
-    // browserTimeout: 40000,
-
-    // services: [
-    //     ['selenium-standalone'
-    //     // , {
-    //     //     // logPath: './temp',
-    //     //     seleniumArgs: {
-    //     //         // version: "3.141.59",
-    //     //         seleniumArgs: ['-host', '192.168.1.155','-port', '4444']
-    //     //     },
-    //     // }
-    // ]
-    // ],
+   
     capabilities: [
     {
         browserName: 'chrome',
-        // port: 5555
+       
     }
-    // ,    
-    // {
-    //     browserName: 'firefox',
-    //     acceptInsecureCerts: true,
-    //     // port: 5555
-    // }
-    // , {
-    //     browserName: 'MicrosoftEdge',
-    //     // port: 5555
-    // }
+  
 ],
 
     
     services: [
         'chromedriver'
-        // ,
-    // 'selenium-standalone'
     ],
     port: 7777,
     seleniumArgs: {
@@ -65,73 +33,9 @@ exports.config = {
         ],
     },
     
-//     capabilities: [
-//         {
-    
-//         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-//         // grid with only 5 firefox instances available you can make sure that not more than
-//         // 5 instances get started at a time.
-//         maxInstances: 1,
-//         //
-//         browserName: 'chrome',
-//         // hostname: '127.0.0.1',
-//         // port: 8080,
-//         'goog:chromeOptions': {
-//             args:['--disable-gpu',
-//             //    'incognito',
-//             //  '--disable-dev-shm-usage',
-//             //  '--disable-extensions',
-//             //  '--disable-infobars',
-//              '--no-sandbox']
-//         },
-//         acceptInsecureCerts: true
-//         // If outputDir is provided WebdriverIO can capture driver session logs
-//         // it is possible to configure which logTypes to include/exclude.
-//         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-//         // excludeDriverLogs: ['bugreport', 'server'],
-//     }
-//     // ,
 
-//     // {  
-//     //     maxInstances: 1,  
-//     //     browserName: 'MicrosoftEdge',        
-//     //     acceptInsecureCerts: true 
-//     // }
-//     // ,
-//     // {  
-//     //     maxInstances: 1,  
-//     //     browserName: 'firefox',        
-//     //     acceptInsecureCerts: true 
-//     // }
-
-// ],
-
-   
-    //
-    // ===================
-    // Test Configurations
-    // ===================
-    // Define all options that are relevant for the WebdriverIO instance here
-    //
-    // Level of logging verbosity: trace | debug | info | warn | error | silent
     logLevel: 'info',
-    //
-    // Set specific log levels per logger
-    // loggers:
-    // - webdriver, webdriverio
-    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
-    // - @wdio/mocha-framework, @wdio/jasmine-framework
-    // - @wdio/local-runner
-    // - @wdio/sumologic-reporter
-    // - @wdio/cli, @wdio/config, @wdio/utils
-    // Level of logging verbosity: trace | debug | info | warn | error | silent
-    // logLevels: {
-    //     webdriver: 'info',
-    //     '@wdio/appium-service': 'info'
-    // },
-    //
-    // If you only want to run your tests until a specific amount of tests have failed use
-    // bail (default is 0 - don't bail, run all tests).
+    
     bail: 0,
   
     baseUrl: 'http://www.automationpractice.pl/index.php',
@@ -156,49 +60,14 @@ exports.config = {
 
     // services: ['selenium-standalone'],
 
-    // services: [
-    //     ['selenium-standalone', {
-    //         // logPath: './temp',
-            // seleniumArgs: {
-            //     // version: "3.141.59",
-            //     seleniumArgs: [
-            //     // '-hostname', '127.0.0.1',
-            //     "-port", "4441"]
-            // },
-    //     }]
-    // ],
-
-    // port: 5555,
-//     services: [['selenium-standalone',
-//     {
-//      logPath:'logs',
-//      args: {
-//                     version: "7.16.13",
-//                     seleniumArgs: [
-//                     '-host', '127.0.0.1',
-//                     '-port', '5555']
-//         },
-//     },
-// ],],
+   
 
     
     // Saves a screenshot to a given path if a command fails.
 	screenshotPath: './Screenshot/',
 
     framework: 'cucumber',
-    //
-    // The number of times to retry the entire specfile when it fails as a whole
-    // specFileRetries: 1,
-    //
-    // Delay in seconds between the spec file retry attempts
-    // specFileRetriesDelay: 0,
-    //
-    // Whether or not retried specfiles should be retried immediately or deferred to the end of the queue
-    // specFileRetriesDeferred: false,
-    //
-    // Test reporter for stdout.
-    // The only one supported by default is 'dot'
-    // see also: https://webdriver.io/docs/dot-reporter
+    
     reporters: ['spec',['allure', {
         outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,

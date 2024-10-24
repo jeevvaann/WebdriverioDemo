@@ -11,5 +11,5 @@ Given(/^I am on the login page$/, async () => {
 When(/^I login with (\w+) and (.+)$/, async(username, password)=>{
     await LoginPage.ClickSignin();
     await LoginPage.login(username,password);
-    await LoginPage.screenshot();
+    await LoginPage.screenshot(); 
 });

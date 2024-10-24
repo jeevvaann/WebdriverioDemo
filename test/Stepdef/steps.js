@@ -21,5 +21,6 @@ Then(/^Enter the product (.+)$/, async(product)=>{
 Then(/^Select the product and add kart$/, async()=>{
     await homepage.changecolour();
     await homepage.addKart();
+    await homepage.addChkOut();
 
 });

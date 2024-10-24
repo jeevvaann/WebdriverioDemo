@@ -20,6 +20,10 @@ get AddProdWhite() {
 get addkart(){
     return $('//button[@name="Submit"]')
 }
+
+get addcheckout(){
+    return $('//a[@title="Proceed to checkout"]')
+}
     async Searchin(string) {
         await this.SearchInput.setValue(string);
         await this.ButtonSearch.click();
@@ -38,6 +42,11 @@ get addkart(){
     async addKart() {
         await this.addkart.waitForClickable({ timeout: 50000 });
         await this.addkart.click();
+    }
+
+    async addChkOut(){
+        await this.addcheckout.waitForClickable({ timeout: 5000 });
+        await this.addcheckout.click();
     }
 }
 

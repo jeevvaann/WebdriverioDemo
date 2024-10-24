@@ -25,6 +25,10 @@ get signin(){
         return $('//button[@id="SubmitLogin"]');
     }
 
+    async ClickSignin() {
+        await this.signin.click();
+    }  
+
     async login(username, password) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
